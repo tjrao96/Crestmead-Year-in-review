@@ -8,16 +8,17 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onBookAppraisal }) => {
   return (
-    <section className="relative h-screen w-full overflow-hidden flex flex-col">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ 
-          backgroundImage: 'url("https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2700&auto=format&fit=crop")',
-        }}
-      >
-        {/* Darker Overlay Gradient for better text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zevesto-navy/70 via-zevesto-navy/40 to-zevesto-navy/90"></div>
+    <section className="relative h-screen w-full overflow-hidden flex flex-col bg-zevesto-navy">
+      {/* Background Image Group */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2653&auto=format&fit=crop" 
+          alt="Modern Crestmead home interior showing real estate potential"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        {/* Overlay Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-zevesto-navy/80 via-zevesto-navy/50 to-zevesto-navy/90"></div>
       </div>
 
       {/* Content Container */}
@@ -49,12 +50,14 @@ const Hero: React.FC<HeroProps> = ({ onBookAppraisal }) => {
             <BarChart3 size={20} />
             View Market Data
           </button>
-          <button 
-            onClick={onBookAppraisal}
+          <a 
+            href="https://api.leadconnectorhq.com/widget/form/ub7Ny1fzcseLZxqDcMjh"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-white text-zevesto-navy px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center justify-center gap-2 min-w-[200px]"
           >
             Get My Home Appraised <ArrowRight size={18} />
-          </button>
+          </a>
         </div>
       </div>
 
@@ -97,8 +100,10 @@ const Hero: React.FC<HeroProps> = ({ onBookAppraisal }) => {
 
            {/* CTA Area */}
            <div className="w-1/4 p-4 flex items-center justify-end pl-8">
-             <button 
-               onClick={onBookAppraisal}
+             <a 
+               href="https://api.leadconnectorhq.com/widget/form/ub7Ny1fzcseLZxqDcMjh"
+               target="_blank"
+               rel="noopener noreferrer"
                className="w-full h-full bg-zevesto-navy text-white rounded-xl flex items-center justify-between px-6 hover:bg-zevesto-blue transition-all group shadow-lg"
              >
                <span className="text-left">
@@ -108,7 +113,7 @@ const Hero: React.FC<HeroProps> = ({ onBookAppraisal }) => {
                <div className="bg-white/10 p-2 rounded-full group-hover:bg-white/20 transition-colors">
                   <ArrowRight size={20} />
                </div>
-             </button>
+             </a>
            </div>
         </div>
       </div>

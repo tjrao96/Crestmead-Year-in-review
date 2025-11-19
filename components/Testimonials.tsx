@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RMA_LOGO, RMA_BADGES, TESTIMONIALS } from '../constants';
 import { Star, Quote } from 'lucide-react';
@@ -10,7 +9,7 @@ const Testimonials: React.FC = () => {
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
              <div className="bg-transparent px-4 py-2">
-               <img src={RMA_LOGO} alt="RateMyAgent" className="h-12 object-contain" />
+               <img src={RMA_LOGO} alt="RateMyAgent Verified Reviews Logo" className="h-12 object-contain" loading="lazy" />
              </div>
           </div>
           <h2 className="text-3xl md:text-4xl font-serif text-zevesto-navy">Client Success Stories</h2>
@@ -24,7 +23,12 @@ const Testimonials: React.FC = () => {
               <Quote className="absolute top-8 right-8 text-zevesto-light w-12 h-12 -z-0" />
               <div className="flex items-center gap-4 mb-6 relative z-10">
                 <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-zevesto-green">
-                  <img src={testimonial.image} alt={testimonial.property} className="w-full h-full object-cover" />
+                  <img 
+                    src={testimonial.image} 
+                    alt={`Property sold at ${testimonial.property}`} 
+                    loading="lazy"
+                    className="w-full h-full object-cover" 
+                  />
                 </div>
                 <div>
                   <h4 className="font-bold text-zevesto-navy">{testimonial.property}</h4>
@@ -63,7 +67,7 @@ const Testimonials: React.FC = () => {
                frameBorder='0' 
                scrolling='no' 
                style={{ minWidth: '100%', width: '100%', height: '450px', border: 'none' }}
-               title="Live Client Reviews"
+               title="Live Client Reviews and Ratings for Rob Ford"
              ></iframe>
            </div>
         </div>
@@ -74,7 +78,8 @@ const Testimonials: React.FC = () => {
               <img 
                 key={index} 
                 src={badge} 
-                alt="RateMyAgent Award" 
+                alt="RateMyAgent Real Estate Award Badge" 
+                loading="lazy"
                 className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
               />
            ))}

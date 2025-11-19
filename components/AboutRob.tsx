@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { TrendingUp, Users, Search, ArrowRight } from 'lucide-react';
 import { AGENT_IMAGE, AGENT_NAME } from '../constants';
@@ -15,7 +14,8 @@ const AboutRob: React.FC = () => {
               <div className="aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100">
                 <img 
                   src={AGENT_IMAGE} 
-                  alt={AGENT_NAME} 
+                  alt={`Portrait of ${AGENT_NAME}, Real Estate Specialist at Zevesto`}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>

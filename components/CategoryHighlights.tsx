@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { PROPERTY_HIGHLIGHTS } from '../constants';
 import { Bed, Bath, Car, ArrowRight, MapPin } from 'lucide-react';
@@ -36,7 +35,8 @@ const CategoryHighlights: React.FC = () => {
                 <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"></div>
                 <img 
                   src={property.imageUrl} 
-                  alt={property.title} 
+                  alt={`Sold property at ${property.address} - ${property.title}`} 
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
@@ -64,13 +64,13 @@ const CategoryHighlights: React.FC = () => {
 
                 <div className="flex items-center justify-between border-t border-gray-100 pt-4 text-stone-850 text-sm font-medium">
                    <div className="flex gap-5">
-                     <div className="flex items-center gap-1.5" title="Bedrooms">
+                     <div className="flex items-center gap-1.5" title={`${property.beds} Bedrooms`}>
                        <Bed size={18} className="text-zevesto-blue" /> <span>{property.beds}</span>
                      </div>
-                     <div className="flex items-center gap-1.5" title="Bathrooms">
+                     <div className="flex items-center gap-1.5" title={`${property.baths} Bathrooms`}>
                        <Bath size={18} className="text-zevesto-blue" /> <span>{property.baths}</span>
                      </div>
-                     <div className="flex items-center gap-1.5" title="Car Spaces">
+                     <div className="flex items-center gap-1.5" title={`${property.cars} Car Spaces`}>
                        <Car size={18} className="text-zevesto-blue" /> <span>{property.cars}</span>
                      </div>
                    </div>

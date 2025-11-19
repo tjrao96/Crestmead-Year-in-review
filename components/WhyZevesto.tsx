@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, ShieldCheck, BarChart2, Key, Briefcase } from 'lucide-react';
 
@@ -65,7 +64,8 @@ const WhyZevesto: React.FC = () => {
                <div className="absolute inset-0 bg-zevesto-navy/20 group-hover:bg-transparent transition-colors duration-500"></div>
                <img 
                  src="https://tjrao.com.au/wp-content/uploads/2024/09/PP_0015_0004_PP_0867-2048x1365.jpg" 
-                 alt="Zevesto Team" 
+                 alt="Zevesto Property Group Team Office Environment" 
+                 loading="lazy"
                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
                />
             </div>
