@@ -9,6 +9,13 @@ export const AGENT_IMAGE = "https://phimg.reapit.website/c3c9fd0f0cb51a9e9a86008
 export const LOGO_URL = "https://www.zevesto.com/wp-content/uploads/2025/01/long-logo-blue-1-edited-768x132.png";
 export const RMA_LOGO = "https://d33v4339jhl8k0.cloudfront.net/docs/assets/5600de649033603707857f12/images/5d230a6d04286369ad8d6830/file-7mkJym7K6d.png";
 export const BOOKING_FORM_URL = "https://api.leadconnectorhq.com/widget/form/ub7Ny1fzcseLZxqDcMjh";
+export const ZEVESTO_VIDEO_ID = "MDiibmeqcQM";
+
+export const ROB_STATS = {
+  medianPrice: "$710k",
+  medianDays: "8",
+  source: "realestate.com.au (Last 12 Months)"
+};
 
 export const RMA_BADGES = [
   "https://static.ratemyagent.com.au/assets/images/recognition/recognition-top20.svg",
@@ -112,6 +119,18 @@ export const TESTIMONIALS = [
     date: "6 months ago",
     rating: 5,
     image: "https://i2.au.reastatic.net/1904x912-resize,extend,r=33,g=40,b=46/323a74dfa556bb9db56e1dba633b13c38b06635b1b52845c9e01c2805d126cd2/image.jpg"
+  },
+  {
+    id: 3,
+    title: "Off-Market Magic",
+    review: "Rob found a buyer for our investment property without us even having to list it online. Saved marketing fees and got a great price. Highly efficient.",
+    author: "Investor",
+    type: "Seller",
+    property: "513 Browns Plains Rd",
+    price: "$745,000",
+    date: "Sep 2025",
+    rating: 5,
+    image: "https://i2.au.reastatic.net/800x600-format=webp/c0c13cdd615e62f10a426085642779549fb448e6d8e0cbfa42801eded50704f4/image.jpg"
   }
 ];
 

@@ -1,5 +1,7 @@
+
 import React from 'react';
-import { ArrowRight, ShieldCheck, BarChart2, Key, Briefcase } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Briefcase } from 'lucide-react';
+import { ZEVESTO_VIDEO_ID } from '../constants';
 
 const WhyZevesto: React.FC = () => {
   return (
@@ -59,17 +61,20 @@ const WhyZevesto: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:w-1/2">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
-               <div className="absolute inset-0 bg-zevesto-navy/20 group-hover:bg-transparent transition-colors duration-500"></div>
-               <img 
-                 src="https://tjrao.com.au/wp-content/uploads/2024/09/PP_0015_0004_PP_0867-2048x1365.jpg" 
-                 alt="Zevesto Property Group Team Office Environment" 
-                 loading="lazy"
-                 className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
-               />
+          <div className="lg:w-1/2 w-full">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group aspect-video w-full bg-black">
+               <iframe 
+                 width="100%" 
+                 height="100%" 
+                 src={`https://www.youtube.com/embed/${ZEVESTO_VIDEO_ID}?rel=0&modestbranding=1`} 
+                 title="Zevesto Property Group Promo" 
+                 frameBorder="0" 
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                 allowFullScreen
+                 className="absolute inset-0 w-full h-full"
+               ></iframe>
             </div>
-            <p className="text-center text-xs text-gray-500 mt-4 uppercase tracking-widest">The Zevesto Property Group Team</p>
+            <p className="text-center text-xs text-gray-500 mt-4 uppercase tracking-widest">See how Zevesto works differently</p>
           </div>
 
         </div>

@@ -1,6 +1,7 @@
+
 import React from 'react';
-import { TrendingUp, Users, Search, ArrowRight } from 'lucide-react';
-import { AGENT_IMAGE, AGENT_NAME } from '../constants';
+import { TrendingUp, Users, Search } from 'lucide-react';
+import { AGENT_IMAGE, AGENT_NAME, ROB_STATS } from '../constants';
 
 const AboutRob: React.FC = () => {
   return (
@@ -8,9 +9,9 @@ const AboutRob: React.FC = () => {
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="flex flex-col md:flex-row gap-12 items-start">
           
-          {/* Professional Profile - More Subtle */}
+          {/* Professional Profile & Stats */}
           <div className="w-full md:w-1/3 sticky top-32">
-            <div className="relative">
+            <div className="relative mb-8">
               <div className="aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100">
                 <img 
                   src={AGENT_IMAGE} 
@@ -22,6 +23,22 @@ const AboutRob: React.FC = () => {
               <div className="absolute -bottom-6 -right-6 bg-zevesto-navy text-white p-6 rounded-xl shadow-xl max-w-[200px] hidden md:block">
                 <p className="font-serif text-lg leading-tight">"Negotiation begins before the first inspection."</p>
               </div>
+            </div>
+
+            {/* Rob's Performance Snapshot */}
+            <div className="bg-zevesto-navy text-white p-6 rounded-2xl shadow-2xl">
+              <h3 className="font-serif text-xl mb-4 border-b border-white/20 pb-3">Performance Snapshot</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                   <div className="text-3xl font-bold text-zevesto-green font-serif">{ROB_STATS.medianPrice}</div>
+                   <div className="text-[10px] font-bold text-gray-300 uppercase tracking-widest mt-1">Median Sold Price</div>
+                </div>
+                <div>
+                   <div className="text-3xl font-bold text-zevesto-green font-serif">{ROB_STATS.medianDays}</div>
+                   <div className="text-[10px] font-bold text-gray-300 uppercase tracking-widest mt-1">Days on Market</div>
+                </div>
+              </div>
+              <p className="text-[10px] text-gray-400 mt-4 text-right opacity-70">Source: {ROB_STATS.source}</p>
             </div>
           </div>
 
