@@ -25,7 +25,7 @@ const Hero: React.FC<HeroProps> = ({ onBookAppraisal }) => {
       <div className="relative z-10 flex-1 container mx-auto px-6 flex flex-col justify-center items-center text-center pt-20 pb-32">
         
         <div className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-2 rounded-full text-xs font-bold tracking-[0.25em] uppercase mb-8 animate-fade-in-up shadow-lg">
-          Crestmead Suburb Flyover Report
+          The annual report
         </div>
         
         <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl text-white mb-8 leading-tight animate-fade-in-up delay-100 drop-shadow-2xl">
