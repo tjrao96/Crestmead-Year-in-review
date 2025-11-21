@@ -27,15 +27,10 @@ const CategoryHighlights: React.FC = () => {
               
               {/* Image Container */}
               <div className="relative overflow-hidden rounded-3xl aspect-[4/3] mb-5">
-                <div className="absolute top-4 left-4 z-10">
-                   <span className="bg-zevesto-navy/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-xs font-bold tracking-wide uppercase shadow-lg">
-                     {property.category}
-                   </span>
-                </div>
                 <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"></div>
-                <img 
-                  src={property.imageUrl} 
-                  alt={`Sold property at ${property.address} - ${property.title}`} 
+                <img
+                  src={property.imageUrl}
+                  alt={`Sold property at ${property.address} - ${property.title}`}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
