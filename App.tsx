@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MessageFromRob from './components/MessageFromRob';
@@ -45,6 +46,7 @@ const App: React.FC = () => {
       <Footer onBookAppraisal={openModal} />
       <StickyMobileCTA onBookAppraisal={openModal} />
       <BookingModal isOpen={isModalOpen} onClose={closeModal} />
+      <Analytics />
     </div>
   );
 };
